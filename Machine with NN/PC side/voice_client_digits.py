@@ -302,7 +302,7 @@ if __name__ == "__main__":
         }
 
     # Загрузка модели
-    model_path = 'D:\\models\\digit\\best_model.pth'
+    model_path = 'models\\digit\\best_model.pth'
     if not os.path.exists(model_path):
         raise FileNotFoundError(f"Модель {model_path} не найдена")
 
