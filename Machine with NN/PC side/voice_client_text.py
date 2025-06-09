@@ -25,31 +25,7 @@ samplerate = int(sd.query_devices(dev_id, 'input')['default_samplerate'])
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.connect((HOST, PORT))
 
-path = ""
-
-print("Выберите модель:")
-print("Исходная:         0")
-print("Модифицированная: 1")
-print("Модифицированная: 2")
-print("Модифицированная: 3")
-
-model_id = 0
-try:
-    model_id = int(input())
-except ValueError:
-    print("Using default value: 0")
-
-if(model_id == 0):
-    path = "D:\\models\\vosk-model-small-ru-0.22"
-elif(model_id == 1):
-    path = "D:\\models\\vosk-model-small-ru-my"
-elif(model_id == 2):
-    path = "D:\\models\\vosk-model-small-ru-my2"
-elif(model_id == 3):
-    path = "D:\\models\\vosk-model-small-ru-my3"
-else:
-    print("Ошибка, применена исходная модель")
-    path = "D:\\models\\vosk-model-small-ru-0.22"
+path = "models\\vosk-model-small-ru-0.22"
 Delta = 0
 a = [0,0,0]
 g = [0,0,0]
